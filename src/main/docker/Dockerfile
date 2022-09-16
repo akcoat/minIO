@@ -2,7 +2,7 @@ FROM  frolvlad/alpine-oraclejre8:slim
 VOLUME /home/logs/
 #ENV gcLog=/gc/eurekaGc/eurekaGC.log
 ARG JAR_FILE
-ENV DEVICE_POSITION=0 MAXSIZE=512 MINSIZE=512
+ENV  MAXSIZE=512 MINSIZE=512
 ADD ${JAR_FILE} app.jar
 #RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
 
