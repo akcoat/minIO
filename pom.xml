@@ -60,8 +60,31 @@
             <version>5.6.5</version>
         </dependency>
     </dependencies>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <environment>dev</environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <environment>test</environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <environment>prod</environment>
+            </properties>
+        </profile>
+    </profiles>
     <build>
-        <finalName>minio</finalName>
+        <finalName>minio-${environment}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
