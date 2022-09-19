@@ -121,7 +121,7 @@
                     <imageName>${project.build.finalName}:${project.version}</imageName>
                     <!-- 指定Dockerfile所在的路径 -->
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-                    <dockerHost>http://42.192.135.4:2376</dockerHost>
+                    <dockerHost>http://192.168.2.37:2376</dockerHost>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
